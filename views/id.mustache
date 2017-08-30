@@ -22,6 +22,11 @@
  {{#books}}
   <a href="{{_id}}/edit">Edit this book</a>
  {{/books}}
+ {{#books}}
+  <form action="/{{_id}}" method="POST">
+    <button type=submit>Delete this entry</button>
+  </form>
+ {{/books}}
 </body>
 
 </html>

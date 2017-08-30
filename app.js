@@ -65,6 +65,13 @@ app.get('/:id', function(req, res) {
  });
 });
 
+app.post('/:id', function(req, res) {
+ Books.findByIdAndRemove({
+  _id: req.params.id
+ }).then(function(books) {
+  res.redirect('/');
+ })
+})
 
 app.get('/', function(req, res) {
  Books.find().then(function(books) {
