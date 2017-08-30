@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+
+<head>
+ <meta charset="utf-8" />
+ <title>Book Collection Manager</title>
+ <link rel="stylesheet" type="text/css" href="css/main.css" />
+ <link rel="stylesheet" type="text/css" href="/css/main.css" />
+</head>
+
+<body>
+ <a href="/">Back to your collection</a>
+ <h1>Edit this book:</h1>
+ {{#books}}
+  <form action="/{{_id}}/edit" method="POST">
+   <label for="{{title}}">Title:</label>
+   <input type="text" id="{{title}}" name="title" value="{{title}}" />
+   <label for="{{author}}">Author:</label>
+   <input type="text" id="{{author}}" name="author" value="{{author}}" />
+   <label for="{{publisher}}">Publisher:</label>
+   <input type="text" id="{{publisher}}" name="publisher" value="{{publisher}}" />
+   <label for="“{{released}}”">Year Released:</label>
+   <input type="number" id="{{released}}" name="released" value="{{released}}" />
+   <label for="{{genre}}">Genre:</label>
+   <input type="text" id="{{genre}}" name="genre" value="{{genre}}" />
+   <button type="submit">Edit</button>
+  </form>
+ {{/books}}
+</body>
+
+</html>

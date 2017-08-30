@@ -1,20 +1,29 @@
 <!doctype html>
 <html>
- <head>
-  <meta charset="utf-8" />
-  <title>Book Collection Manager</title>
- </head>
- <body>
-   <h1>Library:</h1>
-   <a href='/add'>Add a book to your collection:</a>
-   {{#books}}
-    <div>
-      <h2>{{title}}</h2>
-      <h3>{{author}}</h3>
-      <h4>{{publisher}}</h4>
-      <h5>{{released}}</h5>
-      <h6>{{genre}}</h6>
-    </div>
-   {{/books}}
- </body>
+
+<head>
+ <meta charset="utf-8" />
+ <title>Book Collection Manager</title>
+ <link rel="stylesheet" type="text/css" href="css/main.css" />
+ <link rel="stylesheet" type="text/css" href="/css/main.css" />
+</head>
+
+<body>
+ <h1>Library:</h1>
+ <a href='/add'>Add a book to your collection:</a>
+ <div class="collection">
+  {{#books}}
+   <div class="book">
+    <a href="{{_id}}">
+     <h2>{{title}}</h2>
+     <h3>{{author}}</h3>
+     <h4>{{publisher}}</h4>
+     <h5>{{released}}</h5>
+     <h6>{{genre}}</h6>
+    </a>
+   </div>
+  {{/books}}
+ </div>
+</body>
+
 </html>

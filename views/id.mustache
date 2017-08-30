@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+
+<head>
+ <meta charset="utf-8" />
+ <title>Book Collection Manager</title>
+ <link rel="stylesheet" type="text/css" href="css/main.css" />
+ <link rel="stylesheet" type="text/css" href="/css/main.css" />
+</head>
+
+<body>
+ <a href="/">Back to your collection</a>
+ {{#books}}
+  <div class="book">
+   <h2>{{title}}</h2>
+   <h3>{{author}}</h3>
+   <h4>{{publisher}}</h4>
+   <h5>{{released}}</h5>
+   <h6>{{genre}}</h6>
+  </div>
+ {{/books}}
+ {{#books}}
+  <a href="{{_id}}/edit">Edit this book</a>
+ {{/books}}
+</body>
+
+</html>
